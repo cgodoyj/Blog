@@ -8,5 +8,7 @@ class HomeController extends Controller
 {   //El metodo invoke administra una sola ruta
     public function __invoke(){
         return view('home');
+
+        echo "hola";
     }
 }
