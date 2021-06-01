@@ -3,7 +3,6 @@
 //Se agrega solo al escribir en la ruta mediante el Intelphense
 use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
-
 //Especificamos que se utilizara este controllador
 use App\Http\Controllers\HomeController;
 
@@ -47,3 +46,10 @@ protected $namespace = 'App\Http\Controllers;
 en el metodo boot:
 ->namespace($this->namespace)
 */
+
+ //Noe
+Route::get('/EntradaIndex',[EntradaController::class,'index'])->name('EntradaIndex');
+Route::get('/EntradaForm',[EntradaController::class,'create'])->name('EntradaForm');
+Route::post('/EntradaNuevo',[EntradaController::class,'store'])->name('EntradaNuevo');
+Route::get('/EntradaEdit/{id}', [EntradaController::class,'edit'])->name('EntradaEdit');
+Route::post('/EntradaUpdate/{id}', [EntradaController::class,'update'])->name('EntradaUpdate');

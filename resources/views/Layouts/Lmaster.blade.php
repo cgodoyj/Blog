@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from www.bootstrapdash.com/demo/star-laravel-pro/template/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Mar 2021 16:25:53 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
   <title>Star Admin Pro Laravel Dashboard Template</title>
   <meta charset="utf-8">
@@ -29,7 +28,7 @@
 
 </head>
 <body>
-  <div class="container-scroller" id="app">
+  <div class="container-scroller" id="app2">
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="https://www.bootstrapdash.com/demo/star-laravel-pro/template">
@@ -261,6 +260,7 @@
         </li>
       </ul>
     </div>
+    <!--Inicio de menu lateral-->
     <nav class="sidebar sidebar-offcanvas dynamic-active-class-disabled" id="sidebar">
       <ul class="nav">
         <li class="nav-item nav-profile not-navigation-link">
@@ -273,7 +273,7 @@
                 <p class="profile-name">Richard V.Welsh</p>
                 <div class="dropdown" data-display="static">
                   <a href="#" class="nav-link d-flex user-switch-dropdown-toggler" id="UsersettingsDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                    <small class="designation text-muted">Manager</small>
+                    <small class="designation text-muted">Administrator</small>
                     <span class="status-indicator online"></span>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="UsersettingsDropdown">
@@ -293,40 +293,33 @@
                     <a class="dropdown-item mt-2"> Manage Accounts </a>
                     <a class="dropdown-item"> Change Password </a>
                     <a class="dropdown-item"> Check Inbox </a>
-                    <a class="dropdown-item"> Sign Out </a>
+                    <a class="dropdown-item"> Sign OutX </a>
                   </div>
                 </div>
               </div>
             </div>
-            <button class="btn btn-success btn-block">Nuevo Servicio <i class="mdi mdi-plus"></i>
-            </button>
+            <a href="{{route('EntradaForm')}}" style="text-decoration: none;"> <button class="btn btn-success btn-block">Nuevo Evento <i class="mdi mdi-plus"></i></button></a>
+            
           </div>
         </li>
+        <!--Inicio de div del menu dashboard-->
         <li class="nav-item active">
-          <a class="nav-link" href="https://www.bootstrapdash.com/demo/star-laravel-pro/template">
+          <a class="nav-link" href="{{route('dashboard')}}">
             <i class="menu-icon mdi mdi-television"></i>
             <span class="menu-title">Dashboard</span>
           </a>
         </li>
+        <!--Fin de div del menu dashboard-->
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#basic-ui" aria-expanded="false" aria-controls="basic-ui">
             <i class="menu-icon mdi mdi-dna"></i>
-            <span class="menu-title">Catalogos</span>
+            <span class="menu-title">Entrada de Eventos</span>
             <i class="menu-arrow"></i>
           </a>
           <div class="collapse " id="basic-ui">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item ">
-                <a class="nav-link" href="">Clientes</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="">Empresas</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="">Tipo Cliente</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="advanced-ui/context-menu.html">Tipo Servicio</a>
+                <a class="nav-link" href="{{route('EntradaIndex')}} ">Lista de Eventos</a>
               </li>
             </ul>
           </div>
@@ -334,19 +327,13 @@
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#advanced-ui" aria-expanded="false" aria-controls="advanced-ui">
             <i class="menu-icon mdi mdi-cards-variant"></i>
-            <span class="menu-title">Permisos y Roles</span>
+            <span class="menu-title">Captura IPH</span>
             <i class="menu-arrow"></i>
           </a>
           <div class="collapse " id="advanced-ui">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item ">
-                <a class="nav-link" href="advanced-ui/dragula.html">Usuarios</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="advanced-ui/clipboard.html">Roles</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="advanced-ui/context-menu.html">Permisos</a>
+                <a class="nav-link" href="advanced-ui/dragula.html">Lista de IPH</a>
               </li>
             </ul>
           </div>
@@ -354,16 +341,13 @@
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
             <i class="menu-icon mdi mdi-format-list-bulleted"></i>
-            <span class="menu-title">Control de Servicios</span>
+            <span class="menu-title">Reportes</span>
             <i class="menu-arrow"></i>
           </a>
           <div class="collapse " id="forms">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item ">
-                <a class="nav-link" href="forms/basic-elements.html">Lista de Servicios</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="forms/advanced-elements.html">Reportes</a>
+                <a class="nav-link" href="forms/basic-elements.html">Reportes Personalizados</a>
               </li>
             </ul>
           </div>
@@ -371,22 +355,34 @@
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
             <i class="menu-icon mdi mdi-code-tags"></i>
-            <span class="menu-title">Mis Servicios</span>
+            <span class="menu-title">Trazabilidad</span>
             <i class="menu-arrow"></i>
           </a>
           <div class="collapse " id="editors">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item ">
-                <a class="nav-link" href="forms/basic-elements.html">Lista de Servicios</a>
+                <a class="nav-link" href="forms/basic-elements.html">Lista de Seguimiento</a>
               </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" data-toggle="collapse" href="#editors1" aria-expanded="false" aria-controls="editors">
+            <i class="menu-icon mdi mdi-code-tags"></i>
+            <span class="menu-title">Fiscalia</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse " id="editors1">
+            <ul class="nav flex-column sub-menu">
               <li class="nav-item ">
-                <a class="nav-link" href="forms/advanced-elements.html">Reportes</a>
+                <a class="nav-link" href="forms/basic-elements.html">Carpetas de Investigación</a>
               </li>
             </ul>
           </div>
         </li>
       </ul>
     </nav>
+    <!--Fin de menu lateral-->
 
   @yield('content')
   
