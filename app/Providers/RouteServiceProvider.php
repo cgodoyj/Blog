@@ -26,7 +26,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string|null
      */
-     protected $namespace = 'App\Http\Controllers';
+     //Descomentar para sintaxis laravel 7
+     //protected $namespace = 'App\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
