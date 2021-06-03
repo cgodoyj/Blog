@@ -302,14 +302,15 @@
             
           </div>
         </li>
-        <!--Inicio de div del menu dashboard-->
+        <!--
+        <!--Inicio de div del menu dashboard
         <li class="nav-item active">
           <a class="nav-link" href="{{route('dashboard')}}">
             <i class="menu-icon mdi mdi-television"></i>
             <span class="menu-title">Dashboard</span>
           </a>
         </li>
-        <!--Fin de div del menu dashboard-->
+        <!--Fin de div del menu dashboard
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#basic-ui" aria-expanded="false" aria-controls="basic-ui">
             <i class="menu-icon mdi mdi-dna"></i>
@@ -366,6 +367,7 @@
             </ul>
           </div>
         </li>
+        -->
         <li class="nav-item ">
           <a class="nav-link" data-toggle="collapse" href="#editors1" aria-expanded="false" aria-controls="editors">
             <i class="menu-icon mdi mdi-code-tags"></i>

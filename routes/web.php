@@ -20,9 +20,11 @@ Route::get('/dashboard', function () {
 Route::get('/', HomeController::class);
 
 //Se utiliza el nombre del metodo que administra la ruta
-Route::get('cursos', [CursoController::class, 'index']);
-Route::get('cursos/create', [CursoController::class, 'create']);
-Route::get('cursos/{curso}', [CursoController::class, 'show']);
+Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
+Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.show');
+
+Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
 
 /*
 Sintaxis de Laravel 7:
@@ -31,7 +33,7 @@ Route::get('cursos', 'CursoController@index'); --> Para metodos no invocables
 
 Para que funcione esta sintaxis
 en: app/providers/routeserviceprovider.php descomentar
-protected $namespace = 'App\Http\Controllers;
+protected $namespace = 'App\Http\Controllers';
 
 en el metodo boot:
 ->namespace($this->namespace)
