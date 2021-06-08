@@ -26,6 +26,13 @@ Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.sho
 
 Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
 
+Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
+
+Route::post('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
+
+Route::delete('cursos/{curso}',[CursoController::class, 'destroy'])->name('cursos.destroy');
+
+
 /*
 Sintaxis de Laravel 7:
 Route::get('/', 'HomeController'); --> Para el metodo invoke

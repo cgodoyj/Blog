@@ -11,7 +11,9 @@
         {{-- {{route('cursos.show','abc')}}
         Daria la salida: http://127.0.0.1:8000/cursos/abc en lista --}}
 
-        <a href="{{route('cursos.show',$curso->id)}}">"Curso de {{$curso->name}}"</a>
+        <a href="{{route('cursos.show', $curso->id)}}">"Curso de {{$curso->name}}"</a>
+        <br>
+        {{route('cursos.show', $curso->id)}}"
         
 
         </li>
