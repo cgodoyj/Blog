@@ -17,7 +17,9 @@ Route::get('/dashboard', function () {
 
 //Asignando una Ruta al Controlador HomeController Sintaxis Laravel 8
 //Esta ruta busca el metodo invoke
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
+
+Route::view('nosotros','nosotros')->name('nosotros');
 
 //Se utiliza el nombre del metodo que administra la ruta
 Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');

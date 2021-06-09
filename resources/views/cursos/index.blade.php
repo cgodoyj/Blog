@@ -13,7 +13,7 @@
 
         <a href="{{route('cursos.show', $curso->id)}}">"Curso de {{$curso->name}}"</a>
         <br>
-        {{route('cursos.show', $curso->id)}}"
+        {{route('cursos.show', $curso->id)}}
         
 
         </li>
